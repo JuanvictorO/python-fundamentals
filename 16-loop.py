@@ -15,5 +15,17 @@ numbers = [1, 2, 3, 4, 5]
 squaredNumbers = [number**2 for number in numbers]
 print(squaredNumbers)
 
-# Dictionary comprehension
-squaredNumbersDict = {number: number**2 for number in numbers}
+moveList = ['up', 'down', 'left', 'right']
+moveList = [move.upper() for move in moveList]
+
+movieList = ['star wars', 'star trek', 'lord of the rings', 'harry potter']
+movieList = [movie for movie in movieList if 'o' in movie]
+
+while True:
+    search = input('Search for a movie: ')
+    if search == 'exit':
+        break
+    if search in movieList:
+        print('Movie found')
+    else:
+        print('Movie not found')
